@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <title>Manchetes do G1</title>
+</head>
+<body>
+    <h1>Manchetes do G1</h1>
+    <h3>Temas Principais</h3>
+    <div class="box-info">
+        <ul>
+            {% for item in manchetes %}
+                <li>
+                    <a href="{{ item.link }}" target="_blank">{{ item.titulo }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+  </div>
+</body>
+</html>
